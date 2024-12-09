@@ -1,0 +1,924 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Geist, Inter;
+}
+
+.search {
+  background-color: #F9FAFB;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 6px;
+}
+
+.searchbar {
+  width: 450px;
+  height: 50px;
+  border-radius: 6px;
+  background-color: #F9FAFB;
+  border: none;
+  outline: none;
+  gap: 10px;
+  padding-left: 10px;
+  font-family: Geist;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Panier {
+  background-color: #0093D0;
+  color: hsl(0, 0%, 100%);
+  height: 45px;
+  width: 105px;
+  text-decoration: none;
+  padding: 5px;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.Panier:hover {
+  background-color: #0056b3;
+}
+
+svg {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.profile-pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 52%;
+  background-color: #EAEDEE;
+}
+
+.link-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px 20px;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.link-header a {
+  color: #6B7280;
+  text-decoration: none;
+  padding-bottom: 5px;
+  position: relative;
+  transition: color 1s ease;
+  text-transform: uppercase;
+}
+
+.link-header a:active {
+  color: #0093D0;
+}
+
+.link-header a:active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 100%;
+  height: 2px;
+  background-color: #0093D0;
+  transition: bottom 1s ease;
+}
+
+.current {
+  display: flex;
+  padding: 0px 20px;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.current .dot {
+  background-color: #9C9C9C;
+  border-radius: 50%;
+  width: 5px;
+  height: 5px;
+}
+
+.current .product-name {
+  color: #9C9C9C;
+}
+
+.product-profile-image {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  background-color: #F8F6F4;
+  padding: 10px;
+  width: 761px;
+  height: 652px;
+  border-radius: var(--radius-md);
+}
+
+.small-image {
+  display: flex;
+  flex-direction: column;
+  width: 55px;
+  gap: 10px;
+}
+
+.small-image .small-pic1 {
+  width: 55px;
+  height: 55px;
+}
+
+.small-image .small-pic2 {
+  width: 55px;
+  height: 55px;
+  opacity: 50%;
+}
+
+.product-image {
+  max-width: 552px;
+  height: 552px;
+  mix-blend-mode: multiply;
+}
+
+.product-details {
+  width: 760px;
+  height: 652px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-right: 20px;
+}
+
+.product-details .heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 38px;
+}
+
+.product-details .heading p {
+  font-family: Playfair Display;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 37.5px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.product-details .price {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  color: #9C9C9C;
+}
+
+.product-details .price p {
+  font-family: Geist;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: black;
+  margin: 0;
+  padding-top: 0px;
+}
+
+.product-details .dimension {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #9C9C9C;
+  border-bottom: 1px solid #9C9C9C;
+  color: #9C9C9C;
+  font-size: 12px;
+}
+
+.product-details .dimension .left-side {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: #111928;
+}
+
+.product-details .dimension .right-side {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-details .body {
+  color: #5D5D5D;
+  font-family: Geist;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18.2px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  height: 415px;
+}
+
+.product-details .bottom {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  color: #5D5D5D;
+  height: 86px;
+  width: 751px;
+  border-top: 1px solid #9C9C9C;
+  padding: 18px 0px;
+}
+
+.product-details .bottom .box1 {
+  width: 153px;
+  height: 36px;
+  border: 1px solid #00000021;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.product-details .bottom .box1 span {
+  font-family: Geist;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.product-details .bottom .box2 {
+  width: 592px;
+  height: 50px;
+  top: 822px;
+  left: 978px;
+  padding: 14px 0px;
+  gap: 10px;
+  border-radius: 5px;
+  background-color: #5CD2DD;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-details .bottom .box2 {
+  font-family: Cabinet Grotesk;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20.8px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.discriptionpart-body {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding: 10px;
+}
+
+.discriptionpart-body .discription {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  width: 680px;
+}
+
+.discriptionpart-body .discription header {
+  font-family: Cabinet Grotesk;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 25px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.discriptionpart-body .discription p {
+  font-family: Geist;
+  font-size: 14px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+.discriptionpart-body .box {
+  background-color: #FBF9F899;
+  display: flex;
+  flex-direction: column;
+
+}
+.discriptionpart-body .box .box-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 758px;
+height: 62px;
+font-family: Cabinet Grotesk;
+font-size: 16px;
+font-weight: 500;
+line-height: 20.8px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+padding: 10px;
+text-transform: uppercase;
+}
+
+.article{
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  width: 96% ;
+
+padding: 20px;
+gap: 30px;
+background-color: #FBF9F899;
+}
+.article header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+align-items: center;
+}
+.article header p{
+  font-family: Cabinet Grotesk;
+font-size: 35px;
+font-weight: 500;
+line-height: 43.4px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+margin: 0px;
+}
+
+.article header span{
+  text-transform: uppercase;
+  font-family: Cabinet Grotesk;
+font-size: 16px;
+font-weight: 500;
+line-height: 19.84px;
+text-align: left;
+text-decoration-line: underline;
+text-decoration-style: solid;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+
+}
+
+.article-body{
+ display: flex;
+ flex-direction: row;
+ overflow-x: auto;
+  gap:20px;
+  height: 365px;
+}
+
+.article-body::-webkit-scrollbar {
+ display: none;
+ scrollbar-width: none;
+ -ms-overflow-style: none;
+ }
+.card{
+  width: 330px;
+  height: 265px;
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card-pic{
+height: 265px;
+border-radius: var(--radius-md);
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+opacity: 0px;
+background-color: #F9F7F5;
+align-items: center;
+border-radius: 5px;
+}
+.card .card-pic header{
+  padding: 10px;
+  width: 320px;
+}
+.card-pic img{
+  width: 224px;
+height: 224px;
+mix-blend-mode: darken;
+}
+.card-bottom{
+display: flex;
+flex-direction: column;
+height:70px;
+}
+.card-bottom header p{
+  font-family: Playfair Display;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 30px;
+  margin-top: 5px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;  
+}
+.card-bottom .body{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  
+
+}
+.card-bottom .body p{
+  font-family: Geist;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17.5px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #9C9C9C;
+}
+.card-bottom .body span{
+  font-family: Geist;
+font-size: 11px;
+font-weight: 500;
+line-height: 13.75px;
+text-align: center;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+background-color: #F1F4F6;
+padding: 6px 8px 6px 8px;
+border-radius: 20px;
+color: #546A7D;
+}
+
+.card-big .card-pic header{
+  padding: 10px;
+  width: 453px;
+}
+
+.deliverable{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #FFF3F9 0%, #FFF 56.61%);
+  height:400px;
+}
+.deliverable header{
+  font-family: Cabinet Grotesk;
+font-size: 35px;
+font-weight: 500;
+line-height: 43.4px;
+text-align: center;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+color:#393939;
+}
+.deliverable header span {
+  font-weight: 800;
+  margin: 10px;
+  color:#5CD2DD;
+}
+.deliverable p {
+  font-family: Geist;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17.36px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #9C9C9C;
+  margin: 0px;
+}  
+.deliverable .body .pic{
+  margin: 40px;
+  width: 888px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.deliverable .content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 211px;
+  min-width: 117px;
+  text-align: center;
+  align-items: center;
+}
+
+
+
+
+/* register and save part css */
+
+.register-save{
+  display: flex;
+  flex-direction: row;
+  gap:30px;
+  height: 300px;
+  width: 96%;
+  padding: 20px;
+}
+
+.register-save .pic{
+  width: 700px;
+  height: 300px;
+  border-radius: 5px;
+}
+.register-save .pic img{
+  width: 700px;
+  height: 300px;
+  border-radius: 11px;
+  object-fit: cover;
+  transform: rotateY(180deg);
+}
+
+.register-save .register{
+  display: flex;
+  flex-direction: column;
+  padding: 30px 10px 0px 30px;
+  background-color: #FFF3F9;
+  width:700px;
+  border-radius: 11px;
+
+}
+.register-save .register header{
+  font-family: Cabinet Grotesk;
+  font-size: 35px;
+  font-weight: 500;
+  line-height: 43.4px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  
+}
+.register-save .register header span{
+  font-family: Cabinet Grotesk;
+  font-size: 35px;
+  font-weight: 800;
+  line-height: 43.4px;
+  text-align: center;
+  color:#5CD2DD;
+  margin:10px;
+ 
+  
+}
+.register-save .register p {
+  font-family: Geist;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  width: 700px;  
+ color: #BDA2B0;
+ margin-top: 10px;
+ margin-bottom: 20px;
+  
+}
+.register-save .bottom{
+  display: flex;
+  flex-direction: row;
+  width: 700px;
+  justify-content: space-between;
+}
+.register-save .bottom .bar{
+  width: 500px;
+  height: 60px;
+  border-radius: 6px;
+  background-color: #FFFFFF;
+  border: 1px solid #F5E1EB;
+  outline: none;
+  font-family: Geist;
+font-size: 18px;
+font-weight: 300;
+line-height: 18px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+padding-left: 20px;
+}
+.register-save .bottom .btn{
+  display: flex;
+  flex-direction: row;
+  width: 142px;
+  height: 30px;
+  padding: 18px 7px 14px 18px;
+  gap: 8px;
+  border-radius: 8px;
+  opacity: 0px;
+  background: #5CD2DD;
+  font-family: Cabinet Grotesk;
+font-size: 18px;
+font-weight: 700;
+line-height: 18px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+text-transform: uppercase;
+color: white;
+  
+}
+.register-save .bottom .btn p { 
+ 
+  width: 100px;
+  height: 60px;
+  padding: 0px;
+  margin:0px;
+  font-family: Cabinet Grotesk;
+font-size: 18px;
+font-weight: 700;
+line-height: 18px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+text-transform: uppercase;
+color: white;
+  
+}
+
+
+
+
+
+/* Footer of the page */
+.footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;
+  height: 150px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border-top: 1px solid #39393930
+}
+.footer .left-side{
+  align-items: center;
+  width: 800px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.col{
+  height:100px;
+  display: flex;
+  flex-direction: column;
+  gap:5px;
+}
+.col p{
+  margin-top: 0px;
+}
+.col span{
+  font-family: Geist;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17.36px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #393939;  
+}
+
+.footer .right-side{
+  width: 146px;
+  align-items: right;
+}
+.footer .right-side .icons{
+  width: 162px;
+}
+.footer .right-side svg{
+  margin-left: 0px;
+}
+
+
+
+@media (max-width: 1200px) {
+  .product-profile-image {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+
+  .small-image {
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    gap: 5px;
+  }
+
+  .product-details {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .product-details .heading p {
+    font-size: 24px;
+  }
+
+  .product-details .price p {
+    font-size: 18px;
+  }
+
+  .product-details .body {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .product-details .bottom {
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px 0;
+  }
+
+  .product-details .bottom .box1,
+  .product-details .bottom .box2 {
+    width: 100%;
+    text-align: center;
+  }
+
+  .discriptionpart-body {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .discriptionpart-body .discription {
+    width: 100%;
+  }
+
+  .discriptionpart-body .box .box-body {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .article-body {
+    flex-wrap: wrap;
+    gap: 10px;
+    height: auto;
+    justify-content: center;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 330px;
+  }
+
+  .card-pic img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .link-header {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .link-header a {
+    font-size: 14px;
+  }
+
+  .searchbar {
+    width: 100%;
+    height: 40px;
+    font-size: 12px;
+  }
+
+  .Panier {
+    width: auto;
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+
+  .profile-pic {
+    width: 40px;
+    height: 40px;
+  }
+
+  .current .product-name {
+    font-size: 12px;
+  }
+
+  .article {
+    padding: 10px;
+  }
+
+  .article header p {
+    font-size: 24px;
+  }
+
+  .article header span {
+    font-size: 12px;
+  }
+
+  .article-body {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .link-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .searchbar {
+    font-size: 10px;
+    height: 35px;
+  }
+
+  .Panier {
+    font-size: 12px;
+    padding: 5px 8px;
+  }
+
+  .product-details .heading p {
+    font-size: 18px;
+  }
+
+  .product-details .price p {
+    font-size: 14px;
+  }
+
+  .product-details .body {
+    font-size: 10px;
+    line-height: 14px;
+  }
+
+  .discriptionpart-body {
+    padding: 5px;
+    gap: 10px;
+  }
+
+  .discriptionpart-body .discription p {
+    font-size: 12px;
+  }
+
+  .card {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .card-bottom header p {
+    font-size: 18px;
+  }
+
+  .card-bottom .body p {
+    font-size: 12px;
+  }
+
+  .card-bottom .body span {
+    font-size: 10px;
+    padding: 4px;
+  }
+}
